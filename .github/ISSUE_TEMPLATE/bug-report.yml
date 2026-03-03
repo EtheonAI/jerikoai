@@ -1,0 +1,114 @@
+name: Bug Report
+description: Report a bug or unexpected behavior in Jeriko
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! Please fill out the information below to help us investigate.
+
+  - type: input
+    id: version
+    attributes:
+      label: Jeriko Version
+      description: "Run `jeriko --version` to get this."
+      placeholder: "2.0.0-alpha.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      options:
+        - macOS (Apple Silicon)
+        - macOS (Intel)
+        - Linux (x86_64)
+        - Linux (ARM64)
+        - Windows (x86_64)
+        - Windows (ARM64)
+    validations:
+      required: true
+
+  - type: input
+    id: os-version
+    attributes:
+      label: OS Version
+      description: "e.g., macOS 15.3, Ubuntu 24.04, Windows 11 23H2"
+      placeholder: "macOS 15.3"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: install-method
+    attributes:
+      label: Installation Method
+      options:
+        - Install script (curl | bash)
+        - Manual download from releases
+        - Built from source
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear description of what the bug is.
+      placeholder: "Describe what happened..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Step-by-step instructions to reproduce the behavior.
+      placeholder: |
+        1. Run `jeriko ...`
+        2. Enter `...`
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs
+      description: |
+        Paste any relevant log output. Logs are stored in `~/.jeriko/data/logs/`.
+        You can also run with `JERIKO_LOG_LEVEL=debug` for verbose output.
+
+        **Important:** Remove any API keys, tokens, or personal information before pasting.
+      render: shell
+
+  - type: textarea
+    id: config
+    attributes:
+      label: Configuration (optional)
+      description: |
+        If relevant, share your `~/.config/jeriko/config.json` (redact tokens/keys).
+      render: json
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other context, screenshots, or information that might help.

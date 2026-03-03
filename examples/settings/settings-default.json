@@ -1,0 +1,95 @@
+{
+  "$schema": "https://jeriko.ai/schema/config.json",
+  "$comment": "Full Jeriko configuration reference — all fields with their default values.",
+
+  "agent": {
+    "model": "claude",
+    "maxTokens": 4096,
+    "temperature": 0.3,
+    "extendedThinking": false
+  },
+
+  "channels": {
+    "telegram": {
+      "token": "",
+      "adminIds": []
+    },
+    "whatsapp": {
+      "enabled": false
+    },
+    "slack": {
+      "botToken": "",
+      "appToken": "",
+      "channelIds": [],
+      "adminIds": []
+    },
+    "discord": {
+      "token": "",
+      "guildIds": [],
+      "channelIds": [],
+      "adminIds": []
+    }
+  },
+
+  "connectors": {
+    "stripe": {
+      "webhookSecret": ""
+    },
+    "paypal": {
+      "webhookId": ""
+    },
+    "github": {
+      "webhookSecret": ""
+    },
+    "twilio": {
+      "accountSid": "",
+      "authToken": ""
+    }
+  },
+
+  "security": {
+    "allowedPaths": ["~"],
+    "blockedCommands": ["rm -rf /", "mkfs", "dd if="],
+    "sensitiveKeys": [
+      "ANTHROPIC_API_KEY",
+      "OPENAI_API_KEY",
+      "NODE_AUTH_SECRET",
+      "STRIPE_SECRET_KEY",
+      "TELEGRAM_BOT_TOKEN"
+    ]
+  },
+
+  "storage": {
+    "dbPath": "",
+    "memoryPath": ""
+  },
+
+  "logging": {
+    "level": "info",
+    "maxFileSize": 10485760,
+    "maxFiles": 5
+  },
+
+  "providers": [
+    {
+      "id": "openrouter",
+      "name": "OpenRouter",
+      "baseUrl": "https://openrouter.ai/api/v1",
+      "apiKey": "{env:OPENROUTER_API_KEY}",
+      "type": "openai-compatible",
+      "headers": {},
+      "models": {
+        "deepseek": "deepseek/deepseek-chat-v3",
+        "llama": "meta-llama/llama-3.1-405b-instruct"
+      },
+      "defaultModel": "deepseek/deepseek-chat-v3"
+    }
+  ],
+
+  "billing": {
+    "stripeSecretKey": "",
+    "stripeWebhookSecret": "",
+    "stripePriceId": "",
+    "stripePortalConfigId": ""
+  }
+}

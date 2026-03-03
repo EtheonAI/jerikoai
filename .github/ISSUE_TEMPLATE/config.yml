@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://jeriko.ai/docs
+    about: Check the documentation before opening an issue.
+  - name: Discussions
+    url: https://github.com/etheonai/jerikoai/discussions
+    about: Ask questions, share ideas, or show what you've built.
+  - name: Security Vulnerability
+    url: https://github.com/etheonai/jerikoai/blob/main/SECURITY.md
+    about: Report security vulnerabilities through our responsible disclosure process.
