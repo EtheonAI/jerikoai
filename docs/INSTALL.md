@@ -300,7 +300,6 @@ jeriko twilio init
 |----------|--------------|-------|
 | **macOS** | Full | All 30+ commands supported. Apple integrations (Notes, Reminders, Calendar, Contacts, iMessage, Music) use AppleScript. |
 | **Linux** | Core + Partial | Core commands work fully (sys, exec, fs, search, browse, notify, etc.). Apple-specific commands (notes, remind, calendar, contacts, msg, music) are unavailable. Audio commands require ALSA/PulseAudio. |
-| **Windows** | Via WSL | Run inside Windows Subsystem for Linux (WSL 2). Same support level as Linux. Native Windows is not supported. |
 
 ### macOS-Specific Requirements
 

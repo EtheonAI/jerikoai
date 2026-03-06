@@ -5,13 +5,13 @@
 <h1 align="center">Jeriko</h1>
 
 <p align="center">
-  <strong>Unix-first CLI toolkit for AI agents</strong><br/>
-  Commands replace proprietary tool abstractions. Model-agnostic: any AI with exec capability can control the machine.
+  <strong>The New Intelligent OS for macOS</strong><br/>
+  An AI layer that transforms your Mac into an autonomous, model-agnostic operating system.
 </p>
 
 <p align="center">
   <a href="https://github.com/etheonai/jerikoai/releases"><img src="https://img.shields.io/github/v/release/etheonai/jerikoai?label=version&style=flat-square" alt="Version"></a>
-  <a href="#install"><img src="https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-blue?style=flat-square" alt="Platform"></a>
+  <a href="#install"><img src="https://img.shields.io/badge/platform-macOS%20%7C%20Linux-blue?style=flat-square" alt="Platform"></a>
   <a href="LICENSE.md"><img src="https://img.shields.io/badge/license-proprietary-lightgrey?style=flat-square" alt="License"></a>
 </p>
 
@@ -19,36 +19,25 @@
 
 ## Install
 
-**macOS / Linux:**
-
 ```bash
 curl -fsSL https://jeriko.ai/install | bash
 ```
 
-**Windows (PowerShell):**
-
-```powershell
-irm https://jeriko.ai/install.ps1 | iex
-```
-
-**Windows (CMD):**
-
-```cmd
-curl -fsSL https://jeriko.ai/install.cmd -o install.cmd && install.cmd
-```
-
 The installer downloads a pre-compiled binary — no runtime dependencies required.
+
+**Supported platforms:** macOS 12+ (ARM / Intel), Linux x86_64 / ARM64.
 
 ## Features
 
 - **Daemon architecture** — persistent background process with SQLite state, session management, and multi-model routing
 - **Interactive CLI** — rich terminal UI with markdown rendering, syntax highlighting, autocomplete, and streaming responses
 - **Channels** — Telegram, WhatsApp, Slack, Discord — chat with your agent from anywhere
-- **Connectors** — GitHub, Stripe, PayPal, Twilio, Google Drive, OneDrive, Gmail, Outlook, Vercel, X
-- **Triggers** — cron schedules, webhooks, file watchers, HTTP polling — automate anything
+- **20+ Connectors** — GitHub, Stripe, PayPal, Gmail, Google Drive, OneDrive, Outlook, Vercel, X, HubSpot, Shopify, Slack, Discord, and more — OAuth in one click
+- **Triggers** — cron schedules, webhooks, file watchers, HTTP polling, email — automate anything
 - **Skills** — extensible skill system with YAML frontmatter, progressive loading, and community sharing
 - **Multi-provider** — Claude, GPT-4, Ollama, OpenRouter, DeepInfra, Together, Groq, and any OpenAI-compatible API
 - **Web development** — pre-built React/Vite/Tailwind templates with instant scaffolding and live preview
+- **Privacy first** — runs locally on your machine, your API keys never leave your network
 
 ## Quick Start
 
@@ -57,13 +46,13 @@ The installer downloads a pre-compiled binary — no runtime dependencies requir
 jeriko init
 
 # Start a conversation
-jeriko chat
+jeriko
 
 # Start the daemon (enables channels, triggers, connectors)
-jeriko start
+jeriko server start
 
 # Check system status
-jeriko status
+jeriko health
 ```
 
 ## Documentation
@@ -106,4 +95,4 @@ Found a vulnerability? See [SECURITY.md](SECURITY.md) for responsible disclosure
 
 ## License
 
-Proprietary — © 2024-2026 Etheon AI. All rights reserved. See [LICENSE.md](LICENSE.md).
+Proprietary — (c) 2024-2026 Etheon AI. All rights reserved. See [LICENSE.md](LICENSE.md).

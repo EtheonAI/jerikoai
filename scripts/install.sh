@@ -160,8 +160,7 @@ case "$(uname -s)" in
     Darwin) os="darwin" ;;
     Linux)  os="linux" ;;
     MINGW*|MSYS*|CYGWIN*)
-        die "Windows detected — use the PowerShell installer instead:
-  irm https://jeriko.ai/install.ps1 | iex" ;;
+        die "Windows is not supported. Jeriko runs on macOS and Linux." ;;
     *)
         die "Unsupported operating system: $(uname -s)" ;;
 esac
