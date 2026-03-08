@@ -160,7 +160,8 @@ case "$(uname -s)" in
     Darwin) os="darwin" ;;
     Linux)  os="linux" ;;
     MINGW*|MSYS*|CYGWIN*)
-        die "Windows is not supported. Jeriko runs on macOS and Linux." ;;
+        die "Windows detected — use the PowerShell installer instead:
+  irm https://jeriko.ai/install.ps1 | iex" ;;
     *)
         die "Unsupported operating system: $(uname -s)" ;;
 esac
@@ -195,19 +196,11 @@ BINARY_NAME="jeriko-${platform}"
 # ── Header ───────────────────────────────────────────────────────
 
 echo ""
-echo -e "${DIM}    ███           ▐███${NC}"
-echo -e "${DIM}    █████▌ ▐██▌  ▐████▌${NC}"
-echo -e "${DIM}    ██████████████████▌${NC}"
-echo -e "${DIM}    ██████████████████▌${NC}"
-echo -e "${DIM}   ▐████████████████████${NC}"
-echo -e "${DIM}  ▐██████████████████████▌${NC}"
-echo -e "${DIM}  █████████████████▌█████▌${NC}"
-echo -e "${DIM}  ▐██████████████████████${NC}"
-echo -e "${DIM}   ▐████████████████████${NC}"
-echo -e "${DIM}     ▐████████████████▌${NC}"
-echo -e "${DIM}           ███████▌${NC}"
-echo ""
-echo -e "  ${BOLD}jeriko${NC} ${DIM}— CLI toolkit for AI agents${NC}"
+echo -e "  ${DIM}▄▄       ▄▄${NC}"
+echo -e "  ${DIM}█▀▀▀▀▀▀▀▀▀▀▀█${NC}"
+echo -e "  ${DIM}█  ▀     ▀  █${NC}   ${BOLD}jeriko${NC}"
+echo -e "  ${DIM}█     ▄     █${NC}   ${DIM}CLI toolkit for AI agents${NC}"
+echo -e "  ${DIM}▀▀▀▀▀▀▀▀▀▀▀▀▀${NC}"
 echo ""
 
 # ── Check for existing installation ─────────────────────────────
